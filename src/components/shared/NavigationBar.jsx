@@ -1,13 +1,12 @@
 import React, { useState } from "react";
+import { FaWallet, FaUserCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../images/logo.png";
 import BackgroundImg from "./BackgroundImg/BackgroundImg";
-import { FaWallet, FaUserCircle } from "react-icons/fa";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "./NavigationBar.css";
 
@@ -47,7 +46,7 @@ const NavigationBar = () => {
             onClick={() => {
               Navigate("/");
             }}
-            style={{ fontWeight: "bold", fontSize: "1.4rem" }}
+            style={{ fontWeight: "bold", fontSize: "1.5rem" }}
             className={navbar ? "txt-color active" : "txt-color"}
           >
             OpenSea
@@ -69,7 +68,7 @@ const NavigationBar = () => {
                 <Form.Control
                   className="bg-light"
                   type="text"
-                  placeholder="Normal text"
+                  placeholder="Search items, collections, and accounts"
                   style={{
                     width: "67rem",
                     height: "2.5rem",
@@ -78,11 +77,27 @@ const NavigationBar = () => {
                   }}
                 />
               </Form>
+              <p
+                style={{
+                  marginLeft: "2rem",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                }}
+                className={
+                  navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
+                }
+                onClick={() => {
+                  Navigate("/");
+                }}
+              >
+                Home
+              </p>
               <div class="dropdown">
                 <p
                   className={
                     navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
                   }
+                  style={{ fontSize: "18px", fontWeight: "bold" }}
                 >
                   Explore
                 </p>
@@ -94,8 +109,6 @@ const NavigationBar = () => {
                   >
                     All NFTs
                   </a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
                 </div>
               </div>
               <div class="dropdown">
@@ -103,34 +116,40 @@ const NavigationBar = () => {
                   className={
                     navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
                   }
+                  style={{ fontSize: "18px", fontWeight: "bold" }}
                 >
                   Stats
                 </p>
                 <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
+                  <a
+                    onClick={() => {
+                      Navigate("/ranking");
+                    }}
+                  >
+                    Ranking
+                  </a>
+                  <a
+                    onClick={() => {
+                      Navigate("/all-nfts");
+                    }}
+                  >
+                    Activity
+                  </a>
                 </div>
               </div>
-              <div class="dropdown">
-                <p
-                  className={
-                    navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
-                  }
-                >
-                  Resources
-                </p>
-                <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-              </div>
+
               <p
-                style={{ marginLeft: "2rem" }}
+                style={{
+                  marginLeft: "2rem",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                }}
                 className={
                   navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
                 }
+                onClick={() => {
+                  Navigate("/create-catelog");
+                }}
               >
                 Create
               </p>
@@ -139,6 +158,7 @@ const NavigationBar = () => {
                   className={
                     navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
                   }
+                  style={{ fontSize: "18px", fontWeight: "bold" }}
                 >
                   <FaUserCircle />
                 </p>
@@ -150,12 +170,17 @@ const NavigationBar = () => {
                   >
                     Profile
                   </a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
+                  <a href="#">Activity</a>
+                  <a href="#">Favorited</a>
+                  <a href="#">Logout</a>
                 </div>
               </div>
               <p
-                style={{ marginLeft: "2rem" }}
+                style={{
+                  marginLeft: "2rem",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                }}
                 className={
                   navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
                 }

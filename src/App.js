@@ -6,6 +6,8 @@ import Trending_Top from "./components/shared/Trending_Top/Trending_Top";
 import BuyPage from "./components/shared/BuyPage/BuyPage";
 import AllNFTs from "./components/shared/AllNFTs/AllNFTs";
 import Profile from "./components/shared/Profile/Profile";
+import CreateCatelog from "./components/shared/CreateCatelog/CreateCatelog";
+import Ranking from "./components/shared/Ranking/Ranking";
 import "./App.css";
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path="/all-nfts" element={<AllNFTs />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/buy-page" element={<BuyPage />} />
+        <Route path="/ranking" element={<Ranking />} />
+        <Route path="/create-catelog" element={<CreateCatelog />} />
       </Routes>
       <Footer className="sticky-footer" />
     </div>

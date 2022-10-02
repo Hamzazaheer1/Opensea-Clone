@@ -3,7 +3,7 @@ import Table from "react-bootstrap/Table";
 
 const Top = () => {
   return (
-    <Table bordered hover style={{ width: "94vw" }}>
+    <Table hover style={{ width: "94vw" }}>
       <thead>
         <tr>
           <th>#</th>
