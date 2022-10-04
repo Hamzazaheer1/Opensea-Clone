@@ -130,7 +130,7 @@ const NavigationBar = () => {
                   </a>
                   <a
                     onClick={() => {
-                      Navigate("/all-nfts");
+                      Navigate("/activity");
                     }}
                   >
                     Activity

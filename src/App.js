@@ -9,6 +9,7 @@ import Profile from "./components/shared/Profile/Profile";
 import CreateCatelog from "./components/shared/CreateCatelog/CreateCatelog";
 import Ranking from "./components/shared/Ranking/Ranking";
 import "./App.css";
+import Activity from "./components/shared/Activity/Activity";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/buy-page" element={<BuyPage />} />
         <Route path="/ranking" element={<Ranking />} />
+        <Route path="/activity" element={<Activity />} />
         <Route path="/create-catelog" element={<CreateCatelog />} />
       </Routes>
       <Footer className="sticky-footer" />
