@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import { Row, Col } from "react-bootstrap";
 import DefaultCover from "../../images/DefaultCover.jpg";
 import DefaultProfile from "../../images/DefaultProfilePic.jpg";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { Row, Col } from "react-bootstrap";
 import Dropdown from "react-bootstrap/Dropdown";
 
 const Profile = () => {

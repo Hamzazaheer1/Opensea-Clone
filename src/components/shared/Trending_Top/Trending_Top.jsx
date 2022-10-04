@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import { Row, Col, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Row, ColProps } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
-import "./Trending_Top.css";
 import Top from "./Tabs/Top";
 import Trending from "./Tabs/Trending";
 import NewAndNoteable from "../NewAndNoteable/NewAndNoteable";
+import "./Trending_Top.css";
 
 const Trending_Top = () => {
   const [selectedTab, setSelectedTab] = useState(0);

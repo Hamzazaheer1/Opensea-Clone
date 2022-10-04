@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -11,7 +12,6 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Killua from "../../images/killua.jpg";
-import { Row } from "react-bootstrap";
 
 const AllNFTs = () => {
   const [show, setShow] = useState(false);
