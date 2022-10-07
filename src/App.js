@@ -8,8 +8,9 @@ import AllNFTs from "./components/shared/AllNFTs/AllNFTs";
 import Profile from "./components/shared/Profile/Profile";
 import CreateCatelog from "./components/shared/CreateCatelog/CreateCatelog";
 import Ranking from "./components/shared/Ranking/Ranking";
-import "./App.css";
 import Activity from "./components/shared/Activity/Activity";
+import ConntectWallet from "./components/shared/ConnectWallet/ConntectWallet";
+import "./App.css";
 
 function App() {
   return (
@@ -19,10 +20,11 @@ function App() {
         <Route path="/" element={<Trending_Top />} />
         <Route path="/all-nfts" element={<AllNFTs />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/buy-page" element={<BuyPage />} />
+        <Route path="/buy-page/:id" element={<BuyPage />} />
         <Route path="/ranking" element={<Ranking />} />
         <Route path="/activity" element={<Activity />} />
         <Route path="/create-catelog" element={<CreateCatelog />} />
+        <Route path="/connect-wallet" element={<ConntectWallet />} />
       </Routes>
       <Footer className="sticky-footer" />
     </div>

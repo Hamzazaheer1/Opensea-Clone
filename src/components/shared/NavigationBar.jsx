@@ -14,9 +14,12 @@ const NavigationBar = () => {
   const Navigate = useNavigate();
   const [navbar, setNavbar] = useState(false);
   const [show, setShow] = useState(false);
+  const [showCart, setShowCart] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleCloseCart = () => setShowCart(false);
+  const handleShowCart = () => setShowCart(true);
 
   const changeBackground = () => {
     if (window.scrollY >= 80) {
@@ -58,6 +61,7 @@ const NavigationBar = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
+              {/* search */}
               <Form
                 className="d-flex"
                 style={{
@@ -77,6 +81,7 @@ const NavigationBar = () => {
                   }}
                 />
               </Form>
+              {/* Home */}
               <p
                 style={{
                   marginLeft: "2rem",
@@ -92,6 +97,7 @@ const NavigationBar = () => {
               >
                 Home
               </p>
+              {/* Dropdown */}
               <div class="dropdown">
                 <p
                   className={
@@ -111,6 +117,7 @@ const NavigationBar = () => {
                   </a>
                 </div>
               </div>
+              {/* Stats */}
               <div class="dropdown">
                 <p
                   className={
@@ -137,7 +144,7 @@ const NavigationBar = () => {
                   </a>
                 </div>
               </div>
-
+              {/* Create       */}
               <p
                 style={{
                   marginLeft: "2rem",
@@ -153,6 +160,7 @@ const NavigationBar = () => {
               >
                 Create
               </p>
+              {/* Profile */}
               <div class="dropdown">
                 <p
                   className={
@@ -175,6 +183,7 @@ const NavigationBar = () => {
                   <a href="#">Logout</a>
                 </div>
               </div>
+              {/* Wallet */}
               <p
                 style={{
                   marginLeft: "2rem",
@@ -343,6 +352,36 @@ const NavigationBar = () => {
                     &nbsp;&nbsp;&nbsp;MetaMask
                   </b>
                 </Offcanvas.Body>
+              </Offcanvas>
+              {/* Cart */}
+              <p
+                style={{
+                  marginLeft: "2rem",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  marginTop: "1.1rem",
+                }}
+                className={
+                  navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
+                }
+                onClick={handleShowCart}
+              >
+                <i className="bi bi-cart-fill"></i>
+              </p>
+              <Offcanvas
+                show={showCart}
+                onHide={handleCloseCart}
+                placement="end"
+              >
+                <Offcanvas.Header closeButton>
+                  <Offcanvas.Title>
+                    <b>
+                      Your Cart &nbsp;&nbsp;<i class="bi bi-info-circle"></i>
+                    </b>
+                    <hr style={{ width: "16vw" }} />
+                  </Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body></Offcanvas.Body>
               </Offcanvas>
             </Nav>
           </Navbar.Collapse>

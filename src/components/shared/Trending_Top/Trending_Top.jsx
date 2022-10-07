@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, ColProps } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Top from "./Tabs/Top";
 import Trending from "./Tabs/Trending";

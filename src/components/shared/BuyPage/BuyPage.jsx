@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
@@ -8,6 +9,7 @@ import NyanCat from "../../images/NyanCat.gif";
 import "./BuyPage.css";
 
 const BuyPage = () => {
+  let { id } = useParams();
   return (
     <Container className="mt-5">
       <Row>
@@ -116,7 +118,7 @@ const BuyPage = () => {
               <a href="url">WeAsuki</a>
               <br />
               <br />
-              <b style={{ fontSize: "2rem" }}>Asuki#4494</b>
+              <b style={{ fontSize: "2rem" }}>Asuki#{id}</b>
               <br />
               <br />
               <p>Owned by 78D962&nbsp;&nbsp;&nbsp; 3 views</p>

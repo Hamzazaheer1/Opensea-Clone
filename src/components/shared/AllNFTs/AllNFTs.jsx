@@ -12,12 +12,17 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Killua from "../../images/killua.jpg";
+import { useNavigate } from "react-router-dom";
 
 const AllNFTs = () => {
+  const Navigate = useNavigate();
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  //temporary id for card ==> use card id coming from backend
+  let id = 1;
 
   return (
     <>
@@ -70,7 +75,15 @@ const AllNFTs = () => {
       <div style={{ marginLeft: "3rem" }}>
         <Row>
           <Card
-            style={{ width: "18rem", marginTop: "2rem", marginLeft: "2rem" }}
+            style={{
+              width: "18rem",
+              marginTop: "2rem",
+              marginLeft: "2rem",
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              Navigate(`/buy-page/${id}`);
+            }}
           >
             <Card.Img variant="top" src={Killua} />
             <Card.Body>
