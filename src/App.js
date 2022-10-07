@@ -10,6 +10,7 @@ import CreateCatelog from "./components/shared/CreateCatelog/CreateCatelog";
 import Ranking from "./components/shared/Ranking/Ranking";
 import Activity from "./components/shared/Activity/Activity";
 import ConntectWallet from "./components/shared/ConnectWallet/ConntectWallet";
+import Settings from "./components/shared/Settings/Settings";
 import "./App.css";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/activity" element={<Activity />} />
         <Route path="/create-catelog" element={<CreateCatelog />} />
         <Route path="/connect-wallet" element={<ConntectWallet />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
       <Footer className="sticky-footer" />
     </div>

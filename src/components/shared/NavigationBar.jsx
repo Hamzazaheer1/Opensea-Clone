@@ -180,6 +180,13 @@ const NavigationBar = () => {
                   </a>
                   <a href="#">Activity</a>
                   <a href="#">Favorited</a>
+                  <a
+                    onClick={() => {
+                      Navigate("/settings");
+                    }}
+                  >
+                    Settings
+                  </a>
                   <a href="#">Logout</a>
                 </div>
               </div>

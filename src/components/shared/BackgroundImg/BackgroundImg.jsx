@@ -21,13 +21,15 @@ const BackgroundImg = () => {
           <div style={{ marginTop: "6.5rem", filter: "blur(none)" }}>
             <div
               style={{
-                backgroundImage:
-                  "url(https://images.alphacoders.com/120/1203522.jpg)",
+                // backgroundImage:
+                //   "url(https://images.alphacoders.com/120/1203522.jpg)",
                 border: "solid rounded",
                 width: "71vw",
                 height: "52vh",
               }}
-            ></div>
+            >
+              <img src={Nft1} width="1000rem" height="450rem" />
+            </div>
           </div>
         </div>
       </div>
