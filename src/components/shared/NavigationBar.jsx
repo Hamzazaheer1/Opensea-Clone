@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { FaWallet, FaUserCircle } from "react-icons/fa";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../images/logo.png";
-import { Button } from "react-bootstrap";
 import killua from "../images/killua.jpg";
 import BackgroundImg from "./BackgroundImg/BackgroundImg";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { AuthContext } from "../Utils/context/auth-context";
 import "./NavigationBar.css";
 
 const NavigationBar = () => {
   const Navigate = useNavigate();
+  const auth = useContext(AuthContext);
   const [navbar, setNavbar] = useState(false);
   const [show, setShow] = useState(false);
   const [showCart, setShowCart] = useState(false);
@@ -169,7 +169,10 @@ const NavigationBar = () => {
                       : "dropbtn txt-color cursor-pointer explore-style"
                   }
                 >
-                  <FaUserCircle />
+                  <i
+                    style={{ fontSize: "20px" }}
+                    class="bi bi-person-circle"
+                  ></i>
                 </p>
                 <div class="dropdown-content">
                   <a
@@ -203,7 +206,7 @@ const NavigationBar = () => {
               <p
                 style={{
                   marginLeft: "2rem",
-                  fontSize: "18px",
+                  fontSize: "20px",
                   fontWeight: "bold",
                 }}
                 className={
@@ -213,12 +216,12 @@ const NavigationBar = () => {
                 }
                 onClick={handleShow}
               >
-                <FaWallet />
+                <i class="bi bi-wallet-fill"></i>
               </p>
               <Offcanvas show={show} onHide={handleClose} placement="end">
                 <Offcanvas.Header closeButton>
                   <Offcanvas.Title>
-                    <FaUserCircle /> <b> My Wallet</b>
+                    <i class="bi bi-person-circle"></i> <b> My Wallet</b>
                     <hr style={{ width: "16vw" }} />
                   </Offcanvas.Title>
                 </Offcanvas.Header>
@@ -230,6 +233,7 @@ const NavigationBar = () => {
                   <b
                     className="cursor-pointer"
                     onClick={() => {
+                      auth.login();
                       console.log("i am metamask");
                     }}
                   >
