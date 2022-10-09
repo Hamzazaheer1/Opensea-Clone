@@ -49,6 +49,34 @@
   .dropdown-content a:hover {background-color: #ddd;}
   
   .dropdown:hover .dropdown-content {display: block;}
-  
-  /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
 
+  .nav-logo-span {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .form-style {
+    margin-left: 3rem;
+    margin-right: 1rem;
+  }
+
+  .form-control-style {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .home-style{
+    margin-left: 2rem;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .explore-style {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .purchase-btn {
+    width: 22rem;
+    height: 3.5rem;
+  }

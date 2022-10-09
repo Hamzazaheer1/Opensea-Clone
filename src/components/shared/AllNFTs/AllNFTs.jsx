@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import { Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Dropdown from "react-bootstrap/Dropdown";
 import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Killua from "../../images/killua.jpg";
-import { useNavigate } from "react-router-dom";
 
 const AllNFTs = () => {
   const Navigate = useNavigate();
@@ -75,87 +73,11 @@ const AllNFTs = () => {
       <div style={{ marginLeft: "3rem" }}>
         <Row>
           <Card
-            style={{
-              width: "18rem",
-              marginTop: "2rem",
-              marginLeft: "2rem",
-              cursor: "pointer",
-            }}
+            className="allnfts-card cursor-pointer"
+            style={{ width: "18rem", marginTop: "2rem", marginRight: "2rem" }}
             onClick={() => {
               Navigate(`/buy-page/${id}`);
             }}
-          >
-            <Card.Img variant="top" src={Killua} />
-            <Card.Body>
-              <Card.Title>Killua</Card.Title>
-              <Card.Text>Hunter × Hunter</Card.Text>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>Price 10eth</ListGroup.Item>
-            </ListGroup>
-          </Card>
-          <Card
-            style={{ width: "18rem", marginTop: "2rem", marginLeft: "2rem" }}
-          >
-            <Card.Img variant="top" src={Killua} />
-            <Card.Body>
-              <Card.Title>Killua</Card.Title>
-              <Card.Text>Hunter × Hunter</Card.Text>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>Price 10eth</ListGroup.Item>
-            </ListGroup>
-          </Card>
-          <Card
-            style={{ width: "18rem", marginTop: "2rem", marginLeft: "2rem" }}
-          >
-            <Card.Img variant="top" src={Killua} />
-            <Card.Body>
-              <Card.Title>Killua</Card.Title>
-              <Card.Text>Hunter × Hunter</Card.Text>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>Price 10eth</ListGroup.Item>
-            </ListGroup>
-          </Card>
-          <Card
-            style={{ width: "18rem", marginTop: "2rem", marginLeft: "2rem" }}
-          >
-            <Card.Img variant="top" src={Killua} />
-            <Card.Body>
-              <Card.Title>Killua</Card.Title>
-              <Card.Text>Hunter × Hunter</Card.Text>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>Price 10eth</ListGroup.Item>
-            </ListGroup>
-          </Card>
-          <Card
-            style={{ width: "18rem", marginTop: "2rem", marginLeft: "2rem" }}
-          >
-            <Card.Img variant="top" src={Killua} />
-            <Card.Body>
-              <Card.Title>Killua</Card.Title>
-              <Card.Text>Hunter × Hunter</Card.Text>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>Price 10eth</ListGroup.Item>
-            </ListGroup>
-          </Card>
-          <Card
-            style={{ width: "18rem", marginTop: "2rem", marginLeft: "2rem" }}
-          >
-            <Card.Img variant="top" src={Killua} />
-            <Card.Body>
-              <Card.Title>Killua</Card.Title>
-              <Card.Text>Hunter × Hunter</Card.Text>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>Price 10eth</ListGroup.Item>
-            </ListGroup>
-          </Card>
-          <Card
-            style={{ width: "18rem", marginTop: "2rem", marginLeft: "2rem" }}
           >
             <Card.Img variant="top" src={Killua} />
             <Card.Body>

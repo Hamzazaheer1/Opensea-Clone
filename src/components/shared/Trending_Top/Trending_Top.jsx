@@ -14,25 +14,33 @@ const Trending_Top = () => {
       <br />
       <Row>
         <Col sm={5}>
-          <Nav variant="tabs" defaultActiveKey="/home">
+          <Nav variant="tabs">
             <Nav.Item>
               <Nav.Link
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  fontSize: "2.5rem",
+                  fontWeight: "bold",
+                }}
                 onClick={() => {
                   setSelectedTab(0);
                 }}
-                eventKey="link-1"
-                href=""
               >
                 Top
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  fontSize: "2.5rem",
+                  fontWeight: "bold",
+                }}
                 onClick={() => {
                   setSelectedTab(1);
                 }}
-                eventKey="link-1"
-                href=""
               >
                 Trending
               </Nav.Link>

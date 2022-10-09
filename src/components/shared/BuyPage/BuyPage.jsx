@@ -3,6 +3,8 @@ import { Row, Col, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
 import Asuki from "../../images/Asuki.avif";
 import NyanCat from "../../images/NyanCat.gif";
@@ -33,15 +35,11 @@ const BuyPage = () => {
               <ListGroup.Item style={{ height: "4rem" }}>
                 <div class="dropdown">
                   <p
-                    class="btn transparent dropdown-toggle text-start"
+                    class="btn transparent dropdown-toggle text-start about-left"
                     type="button"
                     id="dropdownMenuButton1"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    style={{
-                      width: "31rem",
-                      marginLeft: "-2.5rem",
-                    }}
                   >
                     <b>About WeAsuki</b>
                   </p>
@@ -66,15 +64,11 @@ const BuyPage = () => {
               <ListGroup.Item style={{ height: "4rem" }}>
                 <div class="dropdown">
                   <p
-                    class="btn transparent dropdown-toggle text-start"
+                    class="btn transparent dropdown-toggle text-start about-left"
                     type="button"
                     id="dropdownMenuButton1"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    style={{
-                      width: "31rem",
-                      marginLeft: "-2.5rem",
-                    }}
                   >
                     <b>Details</b>
                   </p>
@@ -146,24 +140,19 @@ const BuyPage = () => {
                   <br />
                   <Row>
                     <Col sm={12}>
-                      <Button
-                        variant="primary"
-                        style={{
-                          height: "3.5rem",
-                          width: "22rem",
-                          marginRight: "0.5rem",
-                        }}
-                      >
-                        Buy now
+                      <Button className="add-to-cart" variant="primary">
+                        Add to cart
                       </Button>
                       <Button
+                        className="make-offer"
                         variant="transparent"
                         style={{
-                          color: "blue",
-                          height: "3.5rem",
                           border: "1px solid lightgrey",
-                          width: "22rem",
+                          fontWeight: "bold",
+                          color: "blue",
                         }}
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
                       >
                         Make offer
                       </Button>
@@ -178,13 +167,9 @@ const BuyPage = () => {
               <div class="btn-group dropdown">
                 <button
                   type="button"
-                  class="btn transparent dropdown-toggle text-start"
+                  class="btn transparent dropdown-toggle text-start btn-right"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  style={{
-                    width: "45rem",
-                    marginLeft: "-2.5rem",
-                  }}
                 >
                   <b>Price History</b>
                 </button>
@@ -195,13 +180,9 @@ const BuyPage = () => {
               <div class="btn-group dropdown">
                 <button
                   type="button"
-                  class="btn transparent dropdown-toggle text-start"
+                  class="btn transparent dropdown-toggle text-start btn-right"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  style={{
-                    width: "45rem",
-                    marginLeft: "-2.5rem",
-                  }}
                 >
                   <b>Listing</b>
                 </button>
@@ -212,13 +193,9 @@ const BuyPage = () => {
               <div class="btn-group dropdown">
                 <button
                   type="button"
-                  class="btn transparent dropdown-toggle text-start"
+                  class="btn transparent dropdown-toggle text-start btn-right"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  style={{
-                    width: "45rem",
-                    marginLeft: "-2.5rem",
-                  }}
                 >
                   <b>Offers</b>
                 </button>
@@ -228,6 +205,38 @@ const BuyPage = () => {
           </Row>
         </Col>
       </Row>
+      <div
+        className="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="exampleModalLabel">
+                Make an offer
+              </h5>
+            </div>
+            <div className="modal-body">
+              <InputGroup className="mb-3">
+                <InputGroup.Text id="basic-addon1">Eth</InputGroup.Text>
+                <Form.Control
+                  placeholder="Amount"
+                  type="number"
+                  aria-describedby="basic-addon1"
+                />
+              </InputGroup>
+            </div>
+            <div class="modal-footer">
+              <button type="button" className="btn btn-primary">
+                Make offer
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </Container>
   );
 };

@@ -3,13 +3,14 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <div className="mt-5">
       <Card
         className="text-center"
-        style={{ backgroundColor: "rgb(24, 104, 183)", color: "white" }}
+        style={{ color: "white", backgroundColor: "rgb(24, 104, 183)" }}
       >
         <Container>
           <Row className="mt-4">
@@ -37,34 +38,13 @@ const Footer = () => {
             <Col sm={1}></Col>
             <Col sm={5}>
               <h3>Join the community</h3>
-              <i
-                class="bi bi-facebook"
-                style={{ marginRight: "15px", fontSize: "2rem" }}
-              ></i>
-              <i
-                class="bi bi-instagram"
-                style={{ marginRight: "15px", fontSize: "2rem" }}
-              ></i>
-              <i
-                class="bi bi-discord"
-                style={{ marginRight: "15px", fontSize: "2rem" }}
-              ></i>
-              <i
-                class="bi bi-reddit"
-                style={{ marginRight: "15px", fontSize: "2rem" }}
-              ></i>
-              <i
-                class="bi bi-youtube"
-                style={{ marginRight: "15px", fontSize: "2rem" }}
-              ></i>
-              <i
-                class="bi bi-tiktok"
-                style={{ marginRight: "15px", fontSize: "2rem" }}
-              ></i>
-              <i
-                class="bi bi-envelope"
-                style={{ marginRight: "15px", fontSize: "2rem" }}
-              ></i>
+              <i class="bi bi-facebook footer-logos cursor-pointer"></i>
+              <i class="bi bi-instagram footer-logos cursor-pointer"></i>
+              <i class="bi bi-discord footer-logos cursor-pointer"></i>
+              <i class="bi bi-reddit footer-logos cursor-pointer"></i>
+              <i class="bi bi-youtube footer-logos cursor-pointer"></i>
+              <i class="bi bi-tiktok footer-logos cursor-pointer"></i>
+              <i class="bi bi-envelope footer-logos cursor-pointer"></i>
             </Col>
             <hr className="mt-4" />
           </Row>

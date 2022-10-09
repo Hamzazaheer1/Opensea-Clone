@@ -13,7 +13,12 @@ const Trending = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr
+          className="cursor-pointer"
+          onClick={() => {
+            console.log("hello");
+          }}
+        >
           <td>1</td>
           <td>Mark</td>
           <td>Otto</td>

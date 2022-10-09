@@ -3,7 +3,7 @@ import Table from "react-bootstrap/Table";
 
 const Top = () => {
   return (
-    <Table hover style={{ width: "94vw" }}>
+    <Table bordered hover style={{ width: "94vw" }}>
       <thead>
         <tr>
           <th>#</th>
@@ -13,7 +13,12 @@ const Top = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr
+          className="cursor-pointer"
+          onClick={() => {
+            console.log("hello");
+          }}
+        >
           <td>1</td>
           <td>Mark</td>
           <td>Otto</td>
@@ -27,7 +32,8 @@ const Top = () => {
         </tr>
         <tr>
           <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
+          <td>Thornton</td>
+          <td>Thornton</td>
           <td>@twitter</td>
         </tr>
       </tbody>

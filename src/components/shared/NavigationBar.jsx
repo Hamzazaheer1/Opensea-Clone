@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { FaWallet, FaUserCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import Container from "react-bootstrap/Container";
+import { Container, Row, Col } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../images/logo.png";
+import { Button } from "react-bootstrap";
+import killua from "../images/killua.jpg";
 import BackgroundImg from "./BackgroundImg/BackgroundImg";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "./NavigationBar.css";
@@ -42,18 +44,25 @@ const NavigationBar = () => {
         style={{ paddingLeft: "3rem" }}
       >
         <Container fluid>
-          <Navbar.Brand>
-            <img className="img-fluid" src={Logo} width="38px" alt="logo" />
-          </Navbar.Brand>
-          <span
+          <div
+            className="cursor-pointer"
             onClick={() => {
               Navigate("/");
             }}
-            style={{ fontWeight: "bold", fontSize: "1.5rem" }}
-            className={navbar ? "txt-color active" : "txt-color"}
           >
-            OpenSea
-          </span>
+            <Navbar.Brand>
+              <img className="img-fluid" src={Logo} width="38px" alt="logo" />
+            </Navbar.Brand>
+            <span
+              className={
+                navbar
+                  ? "txt-color active nav-logo-span"
+                  : "txt-color nav-logo-span"
+              }
+            >
+              OpenSea
+            </span>
+          </div>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -62,34 +71,23 @@ const NavigationBar = () => {
               navbarScroll
             >
               {/* search */}
-              <Form
-                className="d-flex"
-                style={{
-                  marginLeft: "3rem",
-                  marginRight: "1rem",
-                }}
-              >
+              <Form className="d-flex form-style">
                 <Form.Control
-                  className="bg-light"
+                  className="bg-light form-control-style"
                   type="text"
                   placeholder="Search items, collections, and accounts"
                   style={{
                     width: "67rem",
                     height: "2.5rem",
-                    marginTop: "10px",
-                    marginBottom: "10px",
                   }}
                 />
               </Form>
               {/* Home */}
               <p
-                style={{
-                  marginLeft: "2rem",
-                  fontSize: "18px",
-                  fontWeight: "bold",
-                }}
                 className={
-                  navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
+                  navbar
+                    ? "dropbtn txt-color active cursor-pointer home-style"
+                    : "dropbtn txt-color cursor-pointer home-style"
                 }
                 onClick={() => {
                   Navigate("/");
@@ -97,18 +95,20 @@ const NavigationBar = () => {
               >
                 Home
               </p>
-              {/* Dropdown */}
+              {/* Explore */}
               <div class="dropdown">
                 <p
                   className={
-                    navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
+                    navbar
+                      ? "dropbtn txt-color active cursor-pointer explore-style"
+                      : "dropbtn txt-color cursor-pointer explore-style"
                   }
-                  style={{ fontSize: "18px", fontWeight: "bold" }}
                 >
                   Explore
                 </p>
                 <div class="dropdown-content">
                   <a
+                    className="cursor-pointer"
                     onClick={() => {
                       Navigate("/all-nfts");
                     }}
@@ -121,14 +121,16 @@ const NavigationBar = () => {
               <div class="dropdown">
                 <p
                   className={
-                    navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
+                    navbar
+                      ? "dropbtn txt-color active cursor-pointer explore-style"
+                      : "dropbtn txt-color cursor-pointer explore-style"
                   }
-                  style={{ fontSize: "18px", fontWeight: "bold" }}
                 >
                   Stats
                 </p>
                 <div class="dropdown-content">
                   <a
+                    className="cursor-pointer"
                     onClick={() => {
                       Navigate("/ranking");
                     }}
@@ -136,6 +138,7 @@ const NavigationBar = () => {
                     Ranking
                   </a>
                   <a
+                    className="cursor-pointer"
                     onClick={() => {
                       Navigate("/activity");
                     }}
@@ -144,15 +147,12 @@ const NavigationBar = () => {
                   </a>
                 </div>
               </div>
-              {/* Create       */}
+              {/* Create*/}
               <p
-                style={{
-                  marginLeft: "2rem",
-                  fontSize: "18px",
-                  fontWeight: "bold",
-                }}
                 className={
-                  navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
+                  navbar
+                    ? "dropbtn txt-color active cursor-pointer home-style"
+                    : "dropbtn txt-color cursor-pointer home-style"
                 }
                 onClick={() => {
                   Navigate("/create-catelog");
@@ -164,30 +164,39 @@ const NavigationBar = () => {
               <div class="dropdown">
                 <p
                   className={
-                    navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
+                    navbar
+                      ? "dropbtn txt-color active cursor-pointer explore-style"
+                      : "dropbtn txt-color cursor-pointer explore-style"
                   }
-                  style={{ fontSize: "18px", fontWeight: "bold" }}
                 >
                   <FaUserCircle />
                 </p>
                 <div class="dropdown-content">
                   <a
+                    className="cursor-pointer"
                     onClick={() => {
                       Navigate("/profile");
                     }}
                   >
                     Profile
                   </a>
-                  <a href="#">Activity</a>
-                  <a href="#">Favorited</a>
+                  <a className="cursor-pointer" href="#">
+                    Activity
+                  </a>
+                  <a className="cursor-pointer" href="#">
+                    Favorited
+                  </a>
                   <a
+                    className="cursor-pointer"
                     onClick={() => {
                       Navigate("/settings");
                     }}
                   >
                     Settings
                   </a>
-                  <a href="#">Logout</a>
+                  <a className="cursor-pointer" href="#">
+                    Logout
+                  </a>
                 </div>
               </div>
               {/* Wallet */}
@@ -198,7 +207,9 @@ const NavigationBar = () => {
                   fontWeight: "bold",
                 }}
                 className={
-                  navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
+                  navbar
+                    ? "dropbtn txt-color active cursor-pointer"
+                    : "dropbtn txt-color cursor-pointer"
                 }
                 onClick={handleShow}
               >
@@ -217,6 +228,7 @@ const NavigationBar = () => {
                     provider and create one now.
                   </p>
                   <b
+                    className="cursor-pointer"
                     onClick={() => {
                       console.log("i am metamask");
                     }}
@@ -363,13 +375,12 @@ const NavigationBar = () => {
               {/* Cart */}
               <p
                 style={{
-                  marginLeft: "2rem",
-                  fontSize: "18px",
-                  fontWeight: "bold",
                   marginTop: "1.1rem",
                 }}
                 className={
-                  navbar ? "dropbtn txt-color active" : "dropbtn txt-color"
+                  navbar
+                    ? "dropbtn txt-color active cursor-pointer home-style"
+                    : "dropbtn txt-color cursor-pointer home-style"
                 }
                 onClick={handleShowCart}
               >
@@ -388,7 +399,28 @@ const NavigationBar = () => {
                     <hr style={{ width: "16vw" }} />
                   </Offcanvas.Title>
                 </Offcanvas.Header>
-                <Offcanvas.Body></Offcanvas.Body>
+                <Offcanvas.Body>
+                  <Row className="cursor-pointer">
+                    <Col sm={3}>
+                      <img
+                        style={{ borderRadius: "1rem" }}
+                        src={killua}
+                        width="80px"
+                      />
+                    </Col>
+                    <Col sm={5}>
+                      <b>killua#1</b>
+                      <p>hunterXhunter</p>
+                    </Col>
+                    <Col sm={4}>
+                      <p>0.5eth</p>
+                    </Col>
+                    <hr className="mt-4" />
+                  </Row>
+                  <Button className="mt-3 purchase-btn">
+                    Complete purchase
+                  </Button>
+                </Offcanvas.Body>
               </Offcanvas>
             </Nav>
           </Navbar.Collapse>
