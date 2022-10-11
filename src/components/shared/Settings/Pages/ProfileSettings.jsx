@@ -2,8 +2,6 @@ import React from "react";
 import { Button, Row, Col } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import DefaultProfilePic from "../../../images/DefaultProfilePic.jpg";
-import yellowbackground from "../../../images/yellowbackground.jpg";
 import { useNavigate } from "react-router-dom";
 
 const ProfileSettings = () => {
@@ -64,27 +62,13 @@ const ProfileSettings = () => {
           <h5>
             <b style={{ marginLeft: "2rem" }}>Profile Image</b>
           </h5>
-          <input
-            type={"image"}
-            src={DefaultProfilePic}
-            alt="DefaultProfilePic"
-            width="200px"
-            height="200px"
-            style={{ border: "1px solid", borderRadius: "7rem" }}
-          />
+          <input type="file" />
           <br />
           <br />
           <h5>
             <b style={{ marginLeft: "2rem" }}>Profile Banner</b>
           </h5>
-          <input
-            type={"image"}
-            src={yellowbackground}
-            alt="yellowbackground"
-            width="200px"
-            height="200px"
-            style={{ border: "1px solid", borderRadius: "2rem" }}
-          />
+          <input type="file" />
         </Col>
         <Col sm={2}></Col>
       </Row>

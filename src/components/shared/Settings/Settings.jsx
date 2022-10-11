@@ -30,11 +30,11 @@ const Settings = () => {
             textDecoration: "underline",
           }}
         >
-          <ul style={{ cursor: "pointer" }} onClick={() => {}}>
+          <ul className="cursor-pointer" onClick={() => {}}>
             Profile
           </ul>
           <ul
-            style={{ cursor: "pointer" }}
+            className="cursor-pointer"
             onClick={() => {
               setPageShow(0);
             }}
@@ -42,7 +42,7 @@ const Settings = () => {
             Featured Items
           </ul>
           <ul
-            style={{ cursor: "pointer" }}
+            className="cursor-pointer"
             onClick={() => {
               setPageShow(1);
             }}
@@ -50,7 +50,7 @@ const Settings = () => {
             Notification
           </ul>
           <ul
-            style={{ cursor: "pointer" }}
+            className="cursor-pointer"
             onClick={() => {
               setPageShow(2);
             }}
@@ -58,7 +58,7 @@ const Settings = () => {
             Offers
           </ul>
           <ul
-            style={{ cursor: "pointer" }}
+            className="cursor-pointer"
             onClick={() => {
               setPageShow(3);
             }}
@@ -66,7 +66,7 @@ const Settings = () => {
             Account Support
           </ul>
           <ul
-            style={{ cursor: "pointer" }}
+            className="cursor-pointer"
             onClick={() => {
               setPageShow(4);
             }}

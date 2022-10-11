@@ -197,7 +197,12 @@ const NavigationBar = () => {
                   >
                     Settings
                   </a>
-                  <a className="cursor-pointer" href="#">
+                  <a
+                    className="cursor-pointer"
+                    onClick={() => {
+                      auth.logout();
+                    }}
+                  >
                     Logout
                   </a>
                 </div>
@@ -234,7 +239,6 @@ const NavigationBar = () => {
                     className="cursor-pointer"
                     onClick={() => {
                       auth.login();
-                      console.log("i am metamask");
                     }}
                   >
                     <svg
