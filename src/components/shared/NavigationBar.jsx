@@ -60,7 +60,7 @@ const NavigationBar = () => {
                   : "txt-color nav-logo-span"
               }
             >
-              OpenSea
+              ArtiZ
             </span>
           </div>
           <Navbar.Toggle aria-controls="navbarScroll" />

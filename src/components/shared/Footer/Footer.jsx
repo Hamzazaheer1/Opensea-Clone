@@ -50,7 +50,7 @@ const Footer = () => {
           </Row>
           <Row className="mt-5">
             <Col sm={4}>
-              <h3 className="d-flex justify-content-start">Opensea</h3>
+              <h3 className="d-flex justify-content-start">ArtiZ</h3>
               <p className="d-flex justify-content-start">
                 The world’s first and largest digital marketplace for crypto
                 collectibles and non-fungible tokens (NFTs). Buy, sell, and
@@ -90,8 +90,7 @@ const Footer = () => {
           <Row>
             <Col sm={3}>
               <small className="d-flex justify-content-start">
-                <i class="bi bi-c-circle"></i> &nbsp;2022 - 2027 Your Networks,
-                Inc
+                <i class="bi bi-c-circle"></i> &nbsp;2022 - 2027 ArtiZ, Inc
               </small>
             </Col>
             <Col sm={6}></Col>
