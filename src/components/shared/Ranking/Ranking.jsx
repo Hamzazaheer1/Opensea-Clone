@@ -65,8 +65,8 @@ const Ranking = () => {
             </Dropdown.Menu>
           </Dropdown>
         </Col>
-        <Col sm={8}></Col>
-        <Col sm={2}>
+        <Col sm={7}></Col>
+        <Col sm={3}>
           <Button style={{ backgroundColor: "#0d6efd" }}>1h</Button>
           <Button style={{ backgroundColor: "#0d6efd" }}>6h</Button>
           <Button style={{ backgroundColor: "#0d6efd" }}>24h</Button>

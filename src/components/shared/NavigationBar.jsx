@@ -77,7 +77,7 @@ const NavigationBar = () => {
                   type="text"
                   placeholder="Search items, collections, and accounts"
                   style={{
-                    width: "67rem",
+                    width: "45rem",
                     height: "2.5rem",
                   }}
                 />

@@ -47,8 +47,8 @@ const Trending_Top = () => {
             </Nav.Item>
           </Nav>
         </Col>
-        <Col sm={4}></Col>
-        <Col sm={3}>
+        <Col sm={3}></Col>
+        <Col sm={4}>
           <div style={{ marginLeft: "9rem" }}>
             <div class="dropdown">
               <p className={"btn-effect"}>24h</p>

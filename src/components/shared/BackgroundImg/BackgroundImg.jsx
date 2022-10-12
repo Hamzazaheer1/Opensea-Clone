@@ -20,9 +20,9 @@ const BackgroundImg = () => {
         }}
       >
         <Container>
-          <Row style={{ marginTop: "10rem", color: "white" }}>
+          <Row style={{ marginTop: "8rem", color: "white" }}>
             <Col sm={7} style={{}}>
-              <h1 style={{ fontSize: "4rem", fontWeight: "bold" }}>
+              <h1 style={{ fontSize: "3rem", fontWeight: "bold" }}>
                 Discover, collect and sell extraordinary NFTs
               </h1>
               <h1 style={{ fontStyle: "italic" }}>
@@ -31,7 +31,7 @@ const BackgroundImg = () => {
             </Col>
             <Col sm={1}></Col>
             <Col sm={4}>
-              <Card style={{ width: "19rem" }}>
+              <Card style={{ width: "15rem" }}>
                 <Card.Img variant="top" src={asuki} />
                 <Card.Body style={{ color: "black" }}>
                   <Card.Title>Asuki</Card.Title>
@@ -51,56 +51,6 @@ const BackgroundImg = () => {
         </Container>
       </Col>
     </Row>
-    //       <React.Fragment>
-    //   <div
-    //     id="intro"
-    //     className="bg-image"
-    //     style={{
-    //       backgroundImage:
-    //         "url(https://superhqwallpapers.com/wp-content/uploads/2021/08/Peace-Of-Landscape-Oa-Wallpaper.jpg)",
-    //       height: "68vh",
-    //       filter: "blur(2px)",
-    //     }}
-    //   >
-    //     <Container style={{ marginTop: "-2rem" }}>
-    //       <Row>
-    //         <Col sm={4}>
-    //           <h1>Welcome to OpenSea</h1>
-    //         </Col>
-    //         <Col sm={4}></Col>
-    //         <Col sm={4}></Col>
-    //       </Row>
-    //     </Container>
-    //     {/* <img
-    //       src={NFT1}
-    //       alt=""
-    //       width={"100%"}
-    //       height={"600rem"}
-    //       style={{ filter: "blur(2px)" }}
-    //     /> */}
-
-    //     {/* <div
-    //     className="mask text-white"
-    //     style={{ backgroundColor: "rgba(0, 0, 0, 0.8)", height: "68vh" }}
-    //   >
-    //     <div className="container d-flex align-items-center text-center hover-effect">
-    //       <div style={{ marginTop: "6.5rem", filter: "blur(none)" }}>
-    //         <div
-    //           style={{
-    //             // backgroundImage:
-    //             //   "url(https://images.alphacoders.com/120/1203522.jpg)",
-    //             border: "solid rounded",
-    //             width: "71vw",
-    //             height: "52vh",
-    //           }}
-    //         >
-    //           <img src={Nft1} width="1000rem" height="450rem" />
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div> */}
-    //   </div>
-    // </React.Fragment>
   );
 };
 
