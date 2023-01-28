@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import asuki from "../../images/Asuki.avif";
+import cover from "../../images/cover.png";
 
 import "./BackgroundImg.css";
 
@@ -14,9 +15,9 @@ const BackgroundImg = () => {
       <Col
         sm={12}
         style={{
-          backgroundImage:
-            "url(https://superhqwallpapers.com/wp-content/uploads/2021/08/Peace-Of-Landscape-Oa-Wallpaper.jpg)",
+          backgroundImage: `url(${cover})`,
           height: "70vh",
+          backgroundRepeat: "repeat-x",
         }}
       >
         <Container>
