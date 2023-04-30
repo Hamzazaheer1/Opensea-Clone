@@ -17,16 +17,24 @@ const BackgroundImg = () => {
         style={{
           backgroundImage: `url(${cover})`,
           height: "70vh",
-          backgroundRepeat: "repeat-x",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "bottom",
         }}
       >
         <Container>
           <Row style={{ marginTop: "8rem", color: "white" }}>
             <Col sm={7} style={{}}>
-              <h1 style={{ fontSize: "3rem", fontWeight: "bold" }}>
+              <h1
+                style={{
+                  fontSize: "3rem",
+                  fontWeight: "bold",
+                  textShadow: "2px 3px black",
+                }}
+              >
                 Discover, collect and sell extraordinary NFTs
               </h1>
-              <h1 style={{ fontStyle: "italic" }}>
+              <h1 style={{ fontStyle: "italic", textShadow: "1px 0 black" }}>
                 Artisy is a Marketplace to make it possible
               </h1>
             </Col>

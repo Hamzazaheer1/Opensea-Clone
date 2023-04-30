@@ -41,7 +41,7 @@ const NavigationBar = () => {
         expand="lg"
         fixed="top"
         className={navbar ? "nav-effect active" : "nav-effect"}
-        style={{ paddingLeft: "3rem" }}
+        style={{ paddingLeft: "3rem", paddingRight: "3rem" }}
       >
         <Container fluid>
           <div
@@ -64,7 +64,10 @@ const NavigationBar = () => {
             </span>
           </div>
           <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
+          <Navbar.Collapse
+            id="navbarScroll"
+            style={{ maxWidth: "max-content" }}
+          >
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: "100px" }}
